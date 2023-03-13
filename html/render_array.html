@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style>
+        .card
+        {
+            background-color: rgb(17, 145, 145);
+            width: 250px;
+            display:inline-block;
+            margin: 10px;
+            border-left: 8px solid gray;
+
+        }
+        .name
+        {
+            font-weight: bolder;
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: blue;
+        }
+        .price
+        {
+            font-weight: bold;
+            font-size: 20px;
+            color: red;
+
+
+        }
+        .price::after
+        {
+            content:"Rs";
+        }
+        .brand
+        {
+            color: goldenrod;
+            font-size: 20px;
+
+        }
+        .rating
+        {
+            marker-start: 1;
+        }
+        .delete
+        {
+            margin: 10px;
+            text-align: right;
+            
+        }
+        .delete-button
+        {
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+
+        }
+    </style>
+  
+</head>
+<body>
+
+    <input type="text" id="name" placeholder="product name">
+    <input type="text" id="price" placeholder="product price">
+    <input type="text" id="brand" placeholder="product brand">
+    <input type="text" id="rating" placeholder="product rating">
+
+    <button onclick="addnew()">submit</button>
+
+
+    <div id="root">
+
+
+    </div>
+
+    <script>
+         products=[
+    
+    
+            
+            {name:'chair',price:500,brand:'star',rating:4.1},
+            {name:'car',price:5000000,brand:'tata',rating:4.2},
+            {name:'notebook',price:50,brand:'classmate',rating:4.8},
+            {name:'washing machine',price:60000,brand:'www',rating:4.4},
+            {name:'phone',price:65000,brand:'apple',rating:4.5},
+            {name:'laptop',price:58000,brand:'hp',rating:4.1},
+
+
+         ]
+         render();
+         function render()
+        {
+            html=''
+            for(i=0;i<products.length;i++)
+            {
+                html+=`<div class='card'>
+                            <div class='delete'>
+                                <button onclick='work(${i})' class='delete-button'>X</button>
+                                </div>
+
+                            <div class='name'>${products[i].name}</div>
+                            <div class='price'>${products[i].price}</div>
+                            <div class='brand'>${products[i].brand}</div>
+                            <div class='rating'>${products[i].rating}</div>
+                </div>`
+        
+
+            }
+            document.getElementById('root').innerHTML=html;
+
+        }
+        
+         
+
+         function addnew()
+         {
+            n=document.getElementById('name').value;
+            p=document.getElementById('price').value;
+            b=document.getElementById('brand').value;
+            r=document.getElementById('rating').value;
+            
+            pdt={name:n,price:p,brand:b,rating:r}
+            products.push(pdt);
+            render();
+            
+            
+         }
+         function work(index)
+         {
+            
+            
+            alert('Click OK to delete')
+            products.splice(index,1)
+            render();
+
+
+         }
+         
+
+
+    </script>
+ 
+</body>
+</html>

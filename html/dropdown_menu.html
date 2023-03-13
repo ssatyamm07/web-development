@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>menu bar</title>
+    <style>
+        .menu{
+            padding: 10px;
+            background-color: aqua;
+            width: max-content;
+            display: none;
+            position: absolute;
+            
+        }
+        .parent:hover .menu{
+            display: block;
+        }
+        .item{
+            padding: 10px;
+        }
+        .menu .item:hover{
+            background-color: black;
+            color: aliceblue;
+            cursor: pointer;
+
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="parent">
+        <button>menu</button>
+        <div class="menu">
+        <div class="item">Home</div>
+        <div class="item">About us</div>
+        <div class="item">Settings</div>
+        <div class="item">More</div>
+    </div>
+</div>
+<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sint quisquam, maiores optio cupiditate consequuntur odio ad ipsam modi. Quam minima officia numquam dolorum accusantium reprehenderit dolor nisi vel cumque.</p>
+</body>
+</html>

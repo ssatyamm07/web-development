@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Notification Page</title>
+
+    <style>
+        section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #74b9ff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            border-bottom: 1px solid #1e272e;
+            height: 100px;
+
+        }
+
+        .notifications {
+            flex: 1;
+
+
+        }
+
+        #mark-as-read {
+            margin-left: 20px;
+            color: white;
+            text-decoration: underline;
+            cursor: pointer;
+
+        }
+
+        #box {
+            background-color: #2d3436;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100px;
+
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        #box:hover {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            cursor: pointer;
+
+        }
+
+        .txt {
+            display: inline;
+            margin-left: 5px;
+            margin-bottom: 10px;
+            
+        }
+
+        .bell {
+            width: 30px;
+            height: 30px;
+            display: inline;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="parent">
+        <section>
+            <div class="Notifications">
+                <img src="https://www.iconpacks.net/icons/2/free-arrow-left-icon-3099-thumb.png" alt="logo"
+                    class="bell">
+
+                <h1 class="txt">Notifications</h1>
+
+            </div>
+            <div id="mark-as-read">
+                <div>Mark all as read</div>
+            </div>
+        </section>
+        <br>
+        <div id="box" onclick="handler()">
+            <img src="https://img.freepik.com/free-vector/head-man_1308-33466.jpg?size=338&ext=jpg&ga=GA1.2.935330074.1677922240&semt=sph"
+                alt="logo" ;>
+
+            <h3 class="txt">Satyam liked your post!</h3>
+
+
+        </div>
+        <div id="box">
+            <img src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=338&ext=jpg&ga=GA1.1.935330074.1677922240&semt=ais"
+                alt="logo">
+            <h3 class="txt">Karan commented on your post!</h3>
+        </div>
+
+        <div id="box">
+            <img src="https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_570939-44.jpg?size=338&ext=jpg&uid=R95227261&ga=GA1.2.935330074.1677922240&semt=sph"
+                alt="logo">
+            <h3 class="txt">BB mentoned you in a post!</h3>
+        </div>
+
+        <div id="box">
+            <img src="https://img.freepik.com/free-psd/3d-illustration-person-with-rainbow-sunglasses_23-2149436196.jpg?size=338&ext=jpg&uid=R95227261&ga=GA1.1.935330074.1677922240&semt=ais"
+                alt="logo">
+            <h3 class="txt">Jeet started following Aditya sahu!</h3>
+        </div>
+
+        <div id="box">
+            <img src="https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_570939-70.jpg?size=338&ext=jpg&uid=R95227261&ga=GA1.2.935330074.1677922240&semt=sph"
+                alt="logo">
+            <h3 class="txt">Nunu_DON shared a post!</h3>
+        </div>
+
+        <div id="box">
+            <img src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=338&ext=jpg&ga=GA1.1.935330074.1677922240&semt=ais"
+                alt="logo">
+            <h3 class="txt">Karan commented on your post!</h3>
+        </div>
+
+        <div id="box">
+            <img src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=338&ext=jpg&ga=GA1.1.935330074.1677922240&semt=ais"
+                alt="logo">
+            <h3 class="txt">Karan commented on your post!</h3>
+        </div>
+
+        <script>
+            divobj = document.getElementById('box');
+            state = true;
+            function handler() {
+
+                if (state) {
+                    divobj.style = "background-color:#ecf0f1";
+                    state = false;
+                }
+                else {
+                    divobj.style = "background-color:#2d3436";
+                    state = true;
+                }
+            }
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

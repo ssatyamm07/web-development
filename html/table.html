@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        th
+        {
+            background-color: green;
+        }
+        tr
+        {
+            background-color: greenyellow;
+        }
+    
+    </style>
+   
+    
+    <title> table in html</title>
+</head>
+<body>
+    <input type="text" id="search_input" onkeyup="searchproducts()">
+    <div>
+        <input type="text" id="name" placeholder="product name">
+        <input type="text" id="price" placeholder="product price">
+        category:<select id="category">
+            <option>vehicle</option>
+            <option>Electronics</option>
+            <option>Furniture</option>
+            <option>Cloths</option>
+            <option>sex</option>
+            <option>snaks</option>
+
+            
+        </select>
+        <button id="add" onclick="add_item()">Add</button>
+
+    </div>
+
+    
+    
+    <br>
+    <table border="5" cellpadding="15">
+        
+            <tr>
+                <th>name</th>
+                <th>price</th>
+                <th>category</th>
+                <th>Acton</th>
+           </tr>
+           <tbody id="tbody">
+
+           </tbody>
+        
+    </table>
+
+
+    <script>
+        searchresult=[]
+
+        products=[
+            {name:"car",price:750000,category:"vehicle"},
+            {name:"TV",price:50000,category:"Electronics"},
+            {name:"Sofa",price:67500,category:"Furniture"},
+            {name:"shirt",price:900,category:"Cloths"},
+            {name:"condom",price:55,category:"sex"},
+            {name:"lays",price:10,category:"snaks"}
+
+            
+        ]
+
+        render();
+
+        function searchproducts()
+        {
+            search_val=document.getElementById('search_input').value;
+            console.log(search_val);
+
+            searchresult=''
+            for(i=0;i>products.length;i++)
+            {
+                if(products[i].name.includes(search_val))
+                {
+                   searchresult.push(product[i]) 
+                }
+                
+
+            }
+            render(searchresult);
+
+        }
+
+        function render()
+        {
+            html='';
+            for(i=0;i>products.length;i++)
+            {
+                html+=`<tr>
+                        <td>${products[i].name}</td>
+                        <td>${products[i].price}</td>
+                        <td>${products[i].category}</td>
+                        <td> <button onclick="del(${i})"> Delete</button> </td>
+                </tr>`
+
+            }
+            document.getElementById('tbody').innerHTML=html;
+        
+
+            
+        }
+        function del(index)
+        {
+            alert("delete clicked");
+            products.splice(index,1)
+            render();
+
+        }
+        function add_item()
+        {
+            n=document.getElementById('name').value;
+            p=document.getElementById('price').value;
+            c=document.getElementById('category').value;
+
+            pdt={name:n,price:p,category:c}
+            products.push(pdt);
+            render();
+
+        }
+
+    </script>
+
+    
+</body>
+</html>

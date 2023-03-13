@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        button
+        {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: aqua;
+        }
+        button:hover
+        {
+            background-color: blueviolet;
+        }
+
+    </style>
+    
+</head>
+<body>
+
+    <div id="root">
+
+    </div>
+
+    <script>
+
+        rootobj=document.getElementById('root');
+        for(i=0;i<1001;i++)
+        {
+            rootobj.innerHTML+=`<button onclick=change(this)>button${i}</buttom>`
+        }
+        function change(obj)
+        {
+            obj.style.backgroundColor="red";
+        }
+       
+
+
+    </script>
+    
+</body>
+</html>

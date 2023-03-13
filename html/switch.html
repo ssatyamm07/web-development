@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #parent{
+            height: 30px;
+            width: 70px;
+            background-color: black;
+            border-radius: 14px;
+            position: relative;
+        }
+        #child{
+            height: 30px;
+            width: 30px;
+            background-color: red;
+            border-radius:50% ;
+            position: absolute;
+        }
+    </style>
+ 
+</head>
+<body>
+    <div id="parent" onclick="toggle()">
+        <div id="child">
+
+        </div>
+    </div>
+    <script>
+        state=false
+        childobj=document.getElementById('child');
+
+        function toggle() {
+            if(state){
+                childobj.style="background-color:red; left:0";
+                state=false;
+            }
+            else{
+                childobj.style="background-color:green; right:0";
+                state=true;
+            }
+            
+        }
+
+        
+    </script>
+    
+</body>
+</html>

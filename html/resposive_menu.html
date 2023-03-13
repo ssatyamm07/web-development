@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <style>
+        .parent{
+            background-color: rgb(61, 239, 61);
+            position: relative;
+                
+
+        }
+        nav {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               
+            }
+
+            .menu {
+                    list-style:none;
+                    display: flex;
+                    padding: 5px;
+                  }
+
+                  .menu li 
+                  {
+                    margin-right: 20px;                    
+                  }
+                  .search-form {
+                    display: flex;
+                    align-items: center;  
+                  }
+
+                  .search-form input[type="text"] {
+
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                  }
+
+                 .search-form button {
+                   padding: 10px;
+                   border: none;
+                   background-color: #007bff;
+                   color: #fff;
+                   border-radius: 5px;
+                   margin-left: 10px;
+                 }
+                 
+
+            @media screen and (max-width: 768px) {
+
+                .menu {
+                    display: inline-flex;
+                }
+                .search-form {
+                    margin-left: auto;
+                }
+            }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+    <nav>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <form class="search-form">
+          <input type="text" placeholder="Search...">
+          <button type="submit">Search</button>
+        </form>
+      </nav> 
+      </div>     
+</body>
+</html>
